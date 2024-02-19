@@ -27,4 +27,4 @@ SSH 인증의 작동 방식 ###
 
 1. 이제 '.ssh/authorized_keys` 파일이 SSH에서 보안 메커니즘으로 어떻게 작동하는지 이해하셨나요?
 2. 사용자의 개인 키(사용자에게 남아 있음)와 공개 키(서버에 `.ssh/authorized_keys` 파일에 저장됨)의 차이점을 명확히 이해하셨나요?
-3. 서버의 `.ssh/authorized_keys` 파일에 공개 키를 추가하는 실제 프로세스에 대해 얼마나 잘 알고 있나요? www.DeepL.com/Translator(무료 버전)에서 번역함
+3. 서버의 `.ssh/authorized_keys` 파일에 공개 키를 추가하는 실제 프로세스에 대해 얼마나 잘 알고 있나요?

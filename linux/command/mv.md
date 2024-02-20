@@ -16,7 +16,7 @@ Linux의 `mv` 명령은 파일 시스템 내에서 파일과 디렉터리를 이
 
 여러 파일을 디렉터리로 옮기는 중입니다:
 
-```sh
+```bash
 mv file1.txt file2.txt target_directory/
 ```
 
@@ -24,7 +24,7 @@ mv file1.txt file2.txt target_directory/
 
 디렉터리 이름 바꾸기:
 
-```sh
+```bash
 mv old_directory_name new_directory_name
 ```
 

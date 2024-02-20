@@ -6,7 +6,7 @@ Linux의 `tac` 명령은 기본적으로 `cat` 명령과 반대입니다. `cat`�
 
 example.txt`라는 파일의 내용을 되돌리려면 간단히 실행하면 됩니다:
 
-```sh
+```bash
 tac example.txt
 ```
 
@@ -18,7 +18,7 @@ tac example.txt
 
 - **다른 명령과 결합하기**: `tac`의 출력을 다른 명령으로 파이프하여 반전된 내용을 추가로 처리할 수 있습니다. 예를 들어, `tac`을 `grep`과 함께 사용하면 파일의 아래쪽에서 위쪽으로 검색할 수 있습니다:
 
-  ```sh
+  ```bash
   tac example.txt | grep 'search_term'
   ```
 

@@ -6,7 +6,7 @@ Linux의 `rev` 명령은 파일 또는 표준 입력의 각 줄에 있는 문자
 
 'example.txt'라는 파일에 있는 문자를 반대로 바꾸려면
 
-```sh
+```bash
 rev example.txt
 ```
 
@@ -16,14 +16,14 @@ rev example.txt
 
 `example.txt`에 다음 줄이 포함되어 있는 경우
 
-```sh
+```bash
 hello
 world
 ```
 
 rev example.txt`를 실행하면 다음과 같이 생성됩니다:
 
-```sh
+```bash
 olleh
 dlrow
 ```
@@ -42,7 +42,7 @@ dlrow
 
 `rev`를 `grep`, `awk`, `sed`, 심지어 `tac`과 같은 다른 텍스트 처리 도구와 결합하면 고유한 텍스트 조작 문제를 해결할 수 있는 강력한 한 줄로 만들 수 있습니다. 예를 들어, 파일의 줄을 먼저 뒤집은 다음 각 줄을 원래의 문자 순서로 되돌리려면(단, 뒤집힌 줄 순서는 유지) `tac`과 `rev`를 연결하면 됩니다:
 
-```sh
+```bash
 tac example.txt | rev
 ```
 

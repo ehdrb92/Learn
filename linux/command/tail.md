@@ -28,7 +28,7 @@ tail example.txt
 
 로그 파일의 업데이트를 실시간으로 추적하려면 다음을 사용할 수 있습니다:
 
-```sh
+```bash
 tail -f /var/log/syslog
 ```
 
@@ -38,7 +38,7 @@ tail -f /var/log/syslog
 
 `tail` 명령의 출력을 다른 명령으로 파이프하여 추가 처리를 할 수도 있습니다. 예를 들어, `tail`과 `grep`을 결합하면 특정 패턴에 대해 표시된 출력을 필터링할 수 있습니다:
 
-```sh
+```bash
 tail -f /var/log/syslog | grep error
 ```
 

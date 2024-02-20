@@ -13,13 +13,13 @@
 
 심볼릭 링크를 만들 때는 `-s` 옵션이 포함된 `ln` 명령을 사용합니다. 구문은 다음과 같습니다:
 
-```sh
+```bash
 ln -s target_path symlink_path
 ```
 
 예를 들어 `/usr/local/bin/script.sh`에 저장된 스크립트가 있고 홈 디렉터리에 이 스크립트에 대한 심볼릭 링크를 만들려면 다음과 같이 사용합니다:
 
-```sh
+```bash
 ln -s /usr/local/bin/script.sh ~/script_link.sh
 ```
 

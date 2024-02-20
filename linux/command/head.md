@@ -6,7 +6,7 @@ Linux의 `head` 명령은 텍스트 파일 또는 데이터의 시작 부분을 
 
 'example.txt'라는 파일의 처음 10줄을 표시하려면 다음과 같이 사용합니다:
 
-```sh
+```bash
 head example.txt
 ```
 
@@ -22,7 +22,7 @@ head example.txt
 
 'example.txt'의 처음 15줄을 표시하려면
 
-```sh
+```bash
 head -n 15 example.txt
 ```
 
@@ -30,7 +30,7 @@ head -n 15 example.txt
 
 `head` 명령은 파이핑을 통해 다른 명령과 함께 사용하는 경우가 많습니다. 예를 들어 `grep`로 정렬 또는 처리된 파일의 처음 몇 줄을 보고 싶을 수 있습니다. 다음은 `head`를 사용하여 정렬된 파일의 처음 10줄을 표시하는 방법입니다:
 
-```sh
+```bash
 sort example.txt | head
 ```
 

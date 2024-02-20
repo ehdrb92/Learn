@@ -19,7 +19,7 @@ Linux의 `type` 명령은 특정 명령 이름이 주어졌을 때 셸이 실행
 
 `type`명령을 사용하려면 `type`을 입력한 다음 원하는 명령 이름을 입력하기만 하면 됩니다. 예를 들어
 
-```sh
+```bash
 #type [command]
 type ls
 ```

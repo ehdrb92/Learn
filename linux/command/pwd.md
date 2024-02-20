@@ -6,7 +6,7 @@ Linux의 `pwd` 명령은 "print working directory"의 약자입니다. 터미널
 
 예를 들어 홈 디렉터리에 있는 상태에서 `pwd`를 실행하면 다음과 같은 내용이 표시될 수 있습니다:
 
-```sh
+```bash
 /home/yourusername
 ```
 

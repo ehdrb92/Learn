@@ -21,13 +21,13 @@
 
 줄 번호가 있는 큰 로그 파일을 보려면:
 
-```sh
+```bash
 less -N /var/log/syslog
 ```
 
 대소문자를 무시하고 파일에서 특정 용어를 검색하려면:
 
-```sh
+```bash
 less -i [filename]
 ```
 

@@ -4,7 +4,7 @@ Linux의 `wc`(단어 수) 명령은 파일 또는 입력된 입력의 바이트,
 
 `wc`를 사용하려면 파일 이름이나 파이프 입력을 제공하기만 하면 됩니다. 예를 들어
 
-```sh
+```bash
 wc example.txt
 ```
 
@@ -23,13 +23,13 @@ wc example.txt
 
 `example.txt`의 줄, 단어 및 바이트 수를 계산합니다:
 
-```sh
+```bash
 wc example.txt
 ```
 
 여러 파일의 줄 수와 총 줄 수를 계산합니다:
 
-```sh
+```bash
 wc -l example1.txt example2.txt
 ```
 
@@ -37,7 +37,7 @@ wc -l example1.txt example2.txt
 
 `wc` 명령은 정적 파일이 아닌 명령의 출력을 분석하기 위해 파이핑(`|`)을 통해 다른 명령과 함께 사용하는 경우가 많습니다. 예를 들어 현재 디렉터리에 있는 파일 및 디렉터리 수를 계산하려면 다음과 같이 사용할 수 있습니다:
 
-```sh
+```bash
 ls | wc -l
 ```
 

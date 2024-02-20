@@ -19,7 +19,7 @@ Linux의 `cp` 명령은 파일과 디렉터리를 한 위치에서 다른 위치
 
 단일 파일을 다른 디렉터리로 복사하기:
 
-```sh
+```bash
 cp document.txt /path/to/destination
 ```
 
@@ -27,7 +27,7 @@ cp document.txt /path/to/destination
 
 여러 파일을 다른 디렉터리에 복사합니다:
 
-```sh
+```bash
 cp file1.txt file2.txt /path/to/destination
 ```
 
@@ -35,7 +35,7 @@ cp file1.txt file2.txt /path/to/destination
 
 디렉터리를 재귀적으로 복사합니다:
 
-```sh
+```bash
 cp -r /path/to/source_directory /path/to/destination_directory
 ```
 

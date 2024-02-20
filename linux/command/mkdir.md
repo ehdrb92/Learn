@@ -10,7 +10,7 @@ Linux의 `mkdir` 명령은 "make directory"의 약자입니다. 이 명령은 �
 
 자세한 출력이 있는 여러 디렉터리를 만드는 예는 다음과 같습니다:
 
-```sh
+```bash
 mkdir -pv projects/{2024,2025}/{January,February,March}
 ```
 

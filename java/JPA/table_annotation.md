@@ -1,4 +1,4 @@
-Yes, JPA provides several annotations for configuring tables, entities, and their fields beyond just relationship mappings. Here are some commonly used settings and annotations in JPA that can help you configure your tables and entities more effectively:
+JPA provides several annotations for configuring tables, entities, and their fields beyond just relationship mappings. Here are some commonly used settings and annotations in JPA that can help you configure your tables and entities more effectively:
 
 ### @Entity
 

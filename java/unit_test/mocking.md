@@ -1,8 +1,8 @@
-To test a method that communicates with the database using fake data, you can use mocking. Mocking allows you to simulate the behavior of complex components (like database interactions) without relying on the actual implementation. This is particularly useful in unit testing where you want to isolate the component under test. Let's go through a simple example using Mockito, a popular mocking framework for Java.
+가짜 데이터를 사용하여 데이터베이스와 통신하는 메서드를 테스트하려면 모킹을 사용할 수 있습니다. 모킹을 사용하면 실제 구현에 의존하지 않고 복잡한 컴포넌트(예: 데이터베이스 상호 작용)의 동작을 시뮬레이션할 수 있습니다. 이는 테스트 중인 컴포넌트를 격리하려는 단위 테스트에서 특히 유용합니다. 널리 사용되는 Java용 모의 테스트 프레임워크인 Mockito를 사용한 간단한 예제를 살펴보겠습니다.
 
 ### Step 1: Add Mockito to Your Project
 
-First, add Mockito to your project. If you're using Maven, add the following dependency to your `pom.xml`:
+먼저 프로젝트에 Mockito를 추가합니다. Maven을 사용하는 경우 `pom.xml`에 다음 종속성을 추가합니다:
 
 ```xml
 <dependency>
@@ -13,15 +13,9 @@ First, add Mockito to your project. If you're using Maven, add the following dep
 </dependency>
 ```
 
-For Gradle, add this in your `build.gradle`:
-
-```gradle
-testImplementation 'org.mockito:mockito-core:3.3.3'
-```
-
 ### Step 2: Create a Java Class to Test
 
-Let's say we have a `UserService` class that depends on a `UserRepository` for database interactions:
+데이터베이스 상호 작용을 위해 `UserRepository`에 의존하는 `UserService` 클래스가 있다고 가정해 봅시다:
 
 ```java
 public class UserService {
@@ -47,7 +41,7 @@ public interface UserRepository {
 
 ### Step 3: Write the Test with Mock Data
 
-Now, let's write a unit test for `UserService.findUserByEmail` using Mockito to mock the `UserRepository`:
+이제 Mockito를 사용하여 `UserRepository`를 모의하기 위해 `UserService.findUserByEmail`에 대한 단위 테스트를 작성해 보겠습니다:
 
 ```java
 import org.junit.jupiter.api.BeforeEach;
@@ -89,20 +83,20 @@ class UserServiceTest {
 }
 ```
 
-In this test, we:
+이 테스트에서는
 
-- Mock the `UserRepository` using `mock(UserRepository.class)`.
-- Configure the mock to return a predefined `User` object when `findByEmail` is called with a specific email.
-- Assert that the `UserService.findUserByEmail` method returns the correct user.
-- Verify that `findByEmail` was called on the `UserRepository` mock.
+- `mock(UserRepository.class)`를 사용하여 `UserRepository`를 모의합니다.
+- 특정 이메일로 `findByEmail`이 호출될 때 미리 정의된 `User` 객체를 반환하도록 모의 객체를 구성합니다.
+- UserService.findUserByEmail` 메서드가 올바른 사용자를 반환하는지 확인합니다.
+- `UserRepository` mock에서 `findByEmail`이 호출되었는지 확인합니다.
 
-Mockito allows us to isolate the `UserService` from the actual database, focusing the test on the logic within `UserService` and using fake data for the database interactions.
+Mockito를 사용하면 실제 데이터베이스에서 `UserService`를 분리하여 `UserService` 내의 로직에 테스트를 집중하고 데이터베이스 상호 작용에 가짜 데이터를 사용할 수 있습니다.
 
-To simplify the unit test example using `@Mock` annotations, we can take advantage of Mockito's annotation-driven approach. This approach reduces boilerplate code by automatically creating mock objects. We'll refactor the previous `UserServiceTest` class to use `@Mock` for creating the mock `UserRepository` and `@InjectMocks` to automatically inject this mock into the `UserService`.
+`@Mock` 어노테이션을 사용하여 단위 테스트 예제를 단순화하기 위해 Mockito의 어노테이션 중심 접근 방식을 활용할 수 있습니다. 이 접근 방식은 모의 객체를 자동으로 생성하여 상용구 코드를 줄입니다. 이전 `UserServiceTest` 클래스를 리팩터링하여 `@Mock`을 사용하여 모의 `UserRepository`를 만들고 `@InjectMocks`를 사용하여 이 모형을 `UserService`에 자동으로 주입하도록 하겠습니다.
 
 ### Step 1: Add Mockito Annotations Dependency
 
-Ensure you have the Mockito annotations dependency in your project. If you're using Maven, it's included in `mockito-core`. For Gradle, the dependency added previously (`testImplementation 'org.mockito:mockito-core:3.3.3'`) is sufficient.
+프로젝트에 Mockito 어노테이션 종속성이 있는지 확인합니다. Maven을 사용하는 경우 `mockito-core`에 포함되어 있습니다.
 
 ### Step 2: Annotate Mocks and Setup
 
@@ -154,8 +148,8 @@ class UserServiceTest {
 
 ### Key Changes and Annotations
 
-- `@Mock`: This annotation is used to create a mock instance of the `UserRepository`. Mockito will automatically inject this mock into fields annotated with `@InjectMocks`.
-- `@InjectMocks`: This annotation is used on the `UserService` field. Mockito will instantiate `UserService` and inject the mock `UserRepository` into it.
-- `MockitoAnnotations.openMocks(this)`: This method initializes fields annotated with Mockito annotations. In JUnit 5, you can alternatively use the Mockito extension by annotating the test class with `@ExtendWith(MockitoExtension.class)` to automate this initialization, removing the need for `setUp` method.
+- `@Mock`: 이 주석은 `UserRepository`의 모의 인스턴스를 만드는 데 사용됩니다. Mockito는 `@InjectMocks` 주석이 달린 필드에 이 모의 객체를 자동으로 주입합니다.
+- `@InjectMocks`: 이 주석은 `UserService` 필드에 사용됩니다. Mockito는 `UserService`를 인스턴스화하고 여기에 `UserRepository` 모의를 삽입합니다.
+- `MockitoAnnotations.openMocks(this)`: 이 메서드는 Mockito 주석이 달린 필드를 초기화합니다. JUnit 5에서는 테스트 클래스에 `@ExtendWith(MockitoExtension.class)` 주석을 추가하여 Mockito 확장을 사용하여 이 초기화를 자동화함으로써 `setUp` 메서드가 필요하지 않게 할 수 있습니다.
 
-By using these annotations, the test class becomes cleaner and more concise, focusing on the behavior under test rather than the setup of mock objects. This approach is especially useful as the number of dependencies grows, making it easier to manage and read the tests.
+이러한 주석을 사용하면 모의 객체 설정보다는 테스트 중인 동작에 초점을 맞춰 테스트 클래스가 더 깔끔하고 간결해집니다. 이 접근 방식은 종속성 수가 증가할 때 특히 유용하므로 테스트를 더 쉽게 관리하고 읽을 수 있습니다.
